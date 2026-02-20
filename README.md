@@ -60,14 +60,15 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## Como fazer o deploy na Vercel
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+1.  **Conecte o repositório:** Vá ao painel da Vercel e importe o repositório `vagastrz`.
+2.  **Configure as Variáveis de Ambiente:** Vá em *Settings > Environment Variables* e adicione:
+    -   `VITE_SUPABASE_URL`: (Sua URL do Supabase)
+    -   `VITE_SUPABASE_ANON_KEY`: (Sua chave anônima do Supabase)
+3.  **Configurações de Build:** O projeto já está configurado para usar a pasta `dist` e o comando `npm run build`. O arquivo `vercel.json` incluído cuidará do roteamento das páginas.
+4.  **Deploy:** Clique em *Deploy* e o site estará no ar!
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Este projeto foi customizado para incluir sistema de reservas, gerenciamento via WhatsApp por horário, painel administrativo e contador de acessos.
