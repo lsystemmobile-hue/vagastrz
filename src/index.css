@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 39 100% 54%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 39 100% 54%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 39 100% 54%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 39 100% 54%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 39 100% 54%;
+
+    /* Custom sport tokens */
+    --sport-primary: 39 100% 54%;
+    --sport-primary-light: 39 100% 60%;
+    --sport-primary-glow: 39 100% 54% / 0.3;
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 3%), hsl(39 50% 10%));
+    --shadow-primary: 0 0 20px hsl(39 100% 54% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .glow-primary {
+    box-shadow: var(--shadow-primary);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+}
